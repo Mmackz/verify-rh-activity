@@ -17,6 +17,6 @@ export async function verifyAdventureBadge(address) {
       return `Has Adventure Badge Level ${badgeLevel}`;
    } catch (error) {
       console.log(error);
-      return "An error occured while verifying this address. Please try again later.";
+      return "An error occured while verifying adventure badges. Please try again later.";
    }
 }
