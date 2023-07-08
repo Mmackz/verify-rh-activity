@@ -1,9 +1,11 @@
 import { verifyAdventureBadge } from "./utils/verifyAdventureBadge.js";
 import { verifyCredentials } from "./utils/verifyCredentials.js";
+import { verifyV2Activity } from "./utils/verifyV2Activity.js";
 
 async function verifyAddress(address) {
-   console.log(await verifyAdventureBadge(address));
-   await verifyCredentials(address);
+   // console.log(await verifyAdventureBadge(address));
+   // await verifyCredentials(address);
+   await verifyV2Activity(address);
 }
 
 verifyAddress("0xa99f898530df1514a566f1a6562d62809e99557d");
