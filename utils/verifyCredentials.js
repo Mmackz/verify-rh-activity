@@ -31,23 +31,14 @@ export async function verifyCredentials(address) {
          args: [address]
       });
 
-      if (hasDaoCredential) {
-         console.log("Has Dao credential")
-      }
-
-      if (hasDefiCredential) {
-         console.log("Has Defi credential")
-      }
-
-      if (hasNftCredential) {
-         console.log("Has Nft credential")
-      }
-
-      if (hasL2Credential) {
-         console.log("Has L2 credential");
-      }
+      return {
+         dao: hasDaoCredential,
+         defi: hasDefiCredential,
+         nft: hasNftCredential,
+         l2: hasL2Credential
+      };
    } catch (error) {
       console.log(error);
-      return "An error occurred while verifying credentials. Please try again later."
+      return null;
    }
 }

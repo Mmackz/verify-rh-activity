@@ -10,13 +10,9 @@ export async function verifyAdventureBadge(address) {
          args: [address]
       });
 
-      if (badgeLevel === 0n) {
-         return "Not eligible for adventure badge";
-      }
-
-      return `Has Adventure Badge Level ${badgeLevel}`;
+      return Number(badgeLevel);
    } catch (error) {
       console.log(error);
-      return "An error occured while verifying adventure badges. Please try again later.";
+      return null;
    }
 }
